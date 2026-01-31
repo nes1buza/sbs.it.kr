@@ -1,12 +1,66 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>내 첫 웹페이지</title>
+  <meta charset="UTF-8">
+  <title>문의하기</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background:#000;
+      color:#fff;
+      font-family: Arial, sans-serif;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      height:100vh;
+      margin:0;
+    }
+    .box {
+      width:100%;
+      max-width:420px;
+      background:#111;
+      padding:30px;
+      border-radius:8px;
+    }
+    h1 {
+      text-align:center;
+      margin-bottom:20px;
+    }
+    input, textarea, button {
+      width:100%;
+      padding:12px;
+      margin-bottom:12px;
+      background:#000;
+      border:1px solid #444;
+      color:#fff;
+      border-radius:4px;
+    }
+    button {
+      background:#fff;
+      color:#000;
+      font-weight:bold;
+      cursor:pointer;
+    }
+    button:hover {
+      background:#ddd;
+    }
+  </style>
 </head>
-<body style="font-family: system-ui; padding: 40px;">
-  <h1>안녕하세요! 👋</h1>
-  <p>가비아 도메인 + GitHub Pages로 연결된 웹페이지입니다.</p>
+<body>
+
+<form
+  class="box"
+  action="https://formspree.io/f/xeekbpgd"
+  method="POST"
+>
+  <h1>Contact Us</h1>
+
+  <input type="text" name="name" placeholder="이름" required>
+  <input type="email" name="email" placeholder="이메일" required>
+  <textarea name="message" rows="6" placeholder="문의 내용" required></textarea>
+
+  <button type="submit">보내기</button>
+</form>
+
 </body>
 </html>
